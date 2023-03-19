@@ -263,7 +263,7 @@ contract ConsentAgreementMgr{
 
                 _agrNum = ConsentAgreementList[i];
 
-                if(now >= ConsentAgreements[_agrNum].endDateTime){
+                if(block.timestamp >= ConsentAgreements[_agrNum].endDateTime){
                     ConsentAgreements[_agrNum].isExpired = true;
                     ConsentAgreements[_agrNum].isValid = false;
                 }
