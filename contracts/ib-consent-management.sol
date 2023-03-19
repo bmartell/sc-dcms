@@ -25,10 +25,13 @@ contract ConsentAgreementMgr{
         string consentReqID;
         address dataSubjectID;
         address requestedBy;
-        string dataSetID;
+        string resourceID;
         string purposeCode;
         uint256 creationDateTime;
         string uOpCode;
+        string roleID;
+        string whatchDogID;
+        uint256 timeID;
         RequestStatus requestStatus;
         LawsAndRegulations legislationBasis;
         string territory;
@@ -127,7 +130,7 @@ contract ConsentAgreementMgr{
         string memory _consentReqID,
         address _dataSubjectID,
         address _requestedBy,
-        string memory _dataSetID,
+        string memory _resourceID,
         string memory _purposeCode,
         string memory _uOpCode,
         string memory _contractVersion,
@@ -142,7 +145,7 @@ contract ConsentAgreementMgr{
 
             ConsentContracts[_consentReqID].dataSubjectID = _dataSubjectID;
             ConsentContracts[_consentReqID].requestedBy = _requestedBy;
-            ConsentContracts[_consentReqID].dataSetID = _dataSetID;
+            ConsentContracts[_consentReqID].resourceID = _resourceID;
             ConsentContracts[_consentReqID].purposeCode = _purposeCode;
             ConsentContracts[_consentReqID].creationDateTime = block.timestamp;
             ConsentContracts[_consentReqID].uOpCode = _uOpCode;
@@ -169,7 +172,7 @@ contract ConsentAgreementMgr{
         {
             return( ConsentContracts[_consentReqID].dataSubjectID,
                     ConsentContracts[_consentReqID].requestedBy,
-                    ConsentContracts[_consentReqID].dataSetID,
+                    ConsentContracts[_consentReqID].resourceID,
                     ConsentContracts[_consentReqID].purposeCode,
                     ConsentContracts[_consentReqID].creationDateTime,
                     ConsentContracts[_consentReqID].uOpCode,
