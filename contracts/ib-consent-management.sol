@@ -9,6 +9,10 @@ pragma solidity >=0.4.16 <0.8.0;
 *   	   Developed by Merlec Mpyana M.
 * 	   Email: mlecjm(a)korea.ac.kr
 *	   Intelligent Blockchain Engineering Lab, Korea University
+*      Changed by Barbara Martelli
+*      Added support for Individual-oriented word state (IWS) 
+*      as suggested by "Consentio" DOI: 10.1109/ICBC48266.2020.9169432 
+*      email: barbara.martelli@cnaf.infn.it 
 */
 
 contract ConsentAgreementMgr{
